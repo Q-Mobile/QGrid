@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		922BA2CA22DA717700691539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BA2C922DA717700691539 /* AppDelegate.swift */; };
+		922BA2CC22DA717700691539 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BA2CB22DA717700691539 /* SceneDelegate.swift */; };
+		922BA2D022DA717A00691539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922BA2CF22DA717A00691539 /* Assets.xcassets */; };
+		922BA2D322DA717A00691539 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922BA2D222DA717A00691539 /* Preview Assets.xcassets */; };
+		922BA2D622DA717A00691539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922BA2D422DA717A00691539 /* LaunchScreen.storyboard */; };
+		922BA2DF22DA775E00691539 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 922BA2DE22DA775E00691539 /* QGrid */; };
+		9296085122DE13BB0039ABA3 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 9296085022DE13BB0039ABA3 /* people.json */; };
+		9296085322DE17E30039ABA3 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296085222DE17E30039ABA3 /* PeopleView.swift */; };
+		9296085522DE193E0039ABA3 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296085422DE193E0039ABA3 /* Storage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		92A4DA6722DF2CC000069E30 /* QGrid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = QGrid; path = ..; sourceTree = "<group>"; };
+		922BA2C622DA717700691539 /* QGridTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QGridTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		922BA2C922DA717700691539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		922BA2CB22DA717700691539 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		922BA2CF22DA717A00691539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		922BA2D222DA717A00691539 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		922BA2D522DA717A00691539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		922BA2D722DA717A00691539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9296085022DE13BB0039ABA3 /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
+		9296085222DE17E30039ABA3 /* PeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		9296085422DE193E0039ABA3 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		92A4DA6922DF2CC000069E30 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		92A4DA6B22DF2CC000069E30 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		92A4DA6C22DF2CC000069E30 /* QGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QGridTests.swift; sourceTree = "<group>"; };
+		92A4DA6D22DF2CC000069E30 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		92A4DA6E22DF2CC000069E30 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		92A4DA6F22DF2CC000069E30 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		92A4DA7222DF2CC000069E30 /* QGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QGrid.swift; sourceTree = "<group>"; };
+		92A4DA7522DF2CC000069E30 /* package.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = package.xcworkspace; sourceTree = "<group>"; };
+		92A4DA7922DF2CC000069E30 /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = xcschememanagement.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		922BA2C322DA717700691539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922BA2DF22DA775E00691539 /* QGrid in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		922BA2BD22DA717700691539 = {
+			isa = PBXGroup;
+			children = (
+				92A4DA6722DF2CC000069E30 /* QGrid */,
+				922BA2C822DA717700691539 /* QGridTestApp */,
+				922BA2C722DA717700691539 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		922BA2C722DA717700691539 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922BA2C622DA717700691539 /* QGridTestApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922BA2C822DA717700691539 /* QGridTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				9296084F22DE13BB0039ABA3 /* Resources */,
+				922BA2C922DA717700691539 /* AppDelegate.swift */,
+				922BA2CB22DA717700691539 /* SceneDelegate.swift */,
+				9296085222DE17E30039ABA3 /* PeopleView.swift */,
+				9296085422DE193E0039ABA3 /* Storage.swift */,
+				922BA2CF22DA717A00691539 /* Assets.xcassets */,
+				922BA2D422DA717A00691539 /* LaunchScreen.storyboard */,
+				922BA2D722DA717A00691539 /* Info.plist */,
+				922BA2D122DA717A00691539 /* Preview Content */,
+			);
+			path = QGridTestApp;
+			sourceTree = "<group>";
+		};
+		922BA2D122DA717A00691539 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				922BA2D222DA717A00691539 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9296084F22DE13BB0039ABA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9296085022DE13BB0039ABA3 /* people.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92A4DA6822DF2CC000069E30 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA6922DF2CC000069E30 /* LinuxMain.swift */,
+				92A4DA6A22DF2CC000069E30 /* QGridTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		92A4DA6A22DF2CC000069E30 /* QGridTests */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA6B22DF2CC000069E30 /* XCTestManifests.swift */,
+				92A4DA6C22DF2CC000069E30 /* QGridTests.swift */,
+			);
+			path = QGridTests;
+			sourceTree = "<group>";
+		};
+		92A4DA7022DF2CC000069E30 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA7122DF2CC000069E30 /* QGrid */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		92A4DA7122DF2CC000069E30 /* QGrid */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA7222DF2CC000069E30 /* QGrid.swift */,
+			);
+			path = QGrid;
+			sourceTree = "<group>";
+		};
+		92A4DA7322DF2CC000069E30 /* .swiftpm */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA7422DF2CC000069E30 /* xcode */,
+			);
+			path = .swiftpm;
+			sourceTree = "<group>";
+		};
+		92A4DA7422DF2CC000069E30 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA7522DF2CC000069E30 /* package.xcworkspace */,
+				92A4DA7622DF2CC000069E30 /* xcuserdata */,
+			);
+			path = xcode;
+			sourceTree = "<group>";
+		};
+		92A4DA7622DF2CC000069E30 /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA7722DF2CC000069E30 /* karolkulesza.xcuserdatad */,
+			);
+			path = xcuserdata;
+			sourceTree = "<group>";
+		};
+		92A4DA7722DF2CC000069E30 /* karolkulesza.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA7822DF2CC000069E30 /* xcschemes */,
+			);
+			path = karolkulesza.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		92A4DA7822DF2CC000069E30 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+				92A4DA7922DF2CC000069E30 /* xcschememanagement.plist */,
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		922BA2C522DA717700691539 /* QGridTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922BA2DA22DA717A00691539 /* Build configuration list for PBXNativeTarget "QGridTestApp" */;
+			buildPhases = (
+				922BA2C222DA717700691539 /* Sources */,
+				922BA2C322DA717700691539 /* Frameworks */,
+				922BA2C422DA717700691539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QGridTestApp;
+			packageProductDependencies = (
+				922BA2DE22DA775E00691539 /* QGrid */,
+			);
+			productName = QGridTestApp;
+			productReference = 922BA2C622DA717700691539 /* QGridTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		922BA2BE22DA717700691539 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "q-mobile";
+				TargetAttributes = {
+					922BA2C522DA717700691539 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 922BA2C122DA717700691539 /* Build configuration list for PBXProject "QGridTestApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 922BA2BD22DA717700691539;
+			packageReferences = (
+			);
+			productRefGroup = 922BA2C722DA717700691539 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				922BA2C522DA717700691539 /* QGridTestApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		922BA2C422DA717700691539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9296085122DE13BB0039ABA3 /* people.json in Resources */,
+				922BA2D622DA717A00691539 /* LaunchScreen.storyboard in Resources */,
+				922BA2D322DA717A00691539 /* Preview Assets.xcassets in Resources */,
+				922BA2D022DA717A00691539 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		922BA2C222DA717700691539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922BA2CA22DA717700691539 /* AppDelegate.swift in Sources */,
+				9296085522DE193E0039ABA3 /* Storage.swift in Sources */,
+				922BA2CC22DA717700691539 /* SceneDelegate.swift in Sources */,
+				9296085322DE17E30039ABA3 /* PeopleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		922BA2D422DA717A00691539 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				922BA2D522DA717A00691539 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		922BA2D822DA717A00691539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		922BA2D922DA717A00691539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		922BA2DB22DA717A00691539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "QGridTestApp/Preview\\ Content";
+				DEVELOPMENT_TEAM = VRN4DR64TJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = QGridTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "it.q-mobile.QGridTestApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		922BA2DC22DA717A00691539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "QGridTestApp/Preview\\ Content";
+				DEVELOPMENT_TEAM = VRN4DR64TJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = QGridTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "it.q-mobile.QGridTestApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		922BA2C122DA717700691539 /* Build configuration list for PBXProject "QGridTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922BA2D822DA717A00691539 /* Debug */,
+				922BA2D922DA717A00691539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922BA2DA22DA717A00691539 /* Build configuration list for PBXNativeTarget "QGridTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922BA2DB22DA717A00691539 /* Debug */,
+				922BA2DC22DA717A00691539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		922BA2DE22DA775E00691539 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 922BA2BE22DA717700691539 /* Project object */;
+}
