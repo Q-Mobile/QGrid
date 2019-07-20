@@ -47,8 +47,8 @@ struct GridCell: View {
         .clipShape(Circle())
         .shadow(color: .primary, radius: 5)
         .padding([.horizontal, .top], 7)
-      Text(person.firstName).font(.headline).color(.white)
-      Text(person.lastName).font(.headline).color(.white)
+      Text(person.firstName).font(.headline).foregroundColor(.white)
+      Text(person.lastName).font(.headline).foregroundColor(.white)
     }
   }
 }
