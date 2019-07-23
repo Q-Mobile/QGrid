@@ -19,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		92A4DA6722DF2CC000069E30 /* QGrid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = QGrid; path = ..; sourceTree = "<group>"; };
 		922BA2C622DA717700691539 /* QGridTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QGridTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922BA2C922DA717700691539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922BA2CB22DA717700691539 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,15 +29,7 @@
 		9296085022DE13BB0039ABA3 /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		9296085222DE17E30039ABA3 /* PeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		9296085422DE193E0039ABA3 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		92A4DA6922DF2CC000069E30 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
-		92A4DA6B22DF2CC000069E30 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		92A4DA6C22DF2CC000069E30 /* QGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QGridTests.swift; sourceTree = "<group>"; };
-		92A4DA6D22DF2CC000069E30 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		92A4DA6E22DF2CC000069E30 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		92A4DA6F22DF2CC000069E30 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		92A4DA7222DF2CC000069E30 /* QGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QGrid.swift; sourceTree = "<group>"; };
-		92A4DA7522DF2CC000069E30 /* package.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = package.xcworkspace; sourceTree = "<group>"; };
-		92A4DA7922DF2CC000069E30 /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = xcschememanagement.plist; sourceTree = "<group>"; };
+		92A4DA6722DF2CC000069E30 /* QGrid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = QGrid; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,81 +91,6 @@
 				9296085022DE13BB0039ABA3 /* people.json */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		92A4DA6822DF2CC000069E30 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA6922DF2CC000069E30 /* LinuxMain.swift */,
-				92A4DA6A22DF2CC000069E30 /* QGridTests */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		92A4DA6A22DF2CC000069E30 /* QGridTests */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA6B22DF2CC000069E30 /* XCTestManifests.swift */,
-				92A4DA6C22DF2CC000069E30 /* QGridTests.swift */,
-			);
-			path = QGridTests;
-			sourceTree = "<group>";
-		};
-		92A4DA7022DF2CC000069E30 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA7122DF2CC000069E30 /* QGrid */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		92A4DA7122DF2CC000069E30 /* QGrid */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA7222DF2CC000069E30 /* QGrid.swift */,
-			);
-			path = QGrid;
-			sourceTree = "<group>";
-		};
-		92A4DA7322DF2CC000069E30 /* .swiftpm */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA7422DF2CC000069E30 /* xcode */,
-			);
-			path = .swiftpm;
-			sourceTree = "<group>";
-		};
-		92A4DA7422DF2CC000069E30 /* xcode */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA7522DF2CC000069E30 /* package.xcworkspace */,
-				92A4DA7622DF2CC000069E30 /* xcuserdata */,
-			);
-			path = xcode;
-			sourceTree = "<group>";
-		};
-		92A4DA7622DF2CC000069E30 /* xcuserdata */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA7722DF2CC000069E30 /* karolkulesza.xcuserdatad */,
-			);
-			path = xcuserdata;
-			sourceTree = "<group>";
-		};
-		92A4DA7722DF2CC000069E30 /* karolkulesza.xcuserdatad */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA7822DF2CC000069E30 /* xcschemes */,
-			);
-			path = karolkulesza.xcuserdatad;
-			sourceTree = "<group>";
-		};
-		92A4DA7822DF2CC000069E30 /* xcschemes */ = {
-			isa = PBXGroup;
-			children = (
-				92A4DA7922DF2CC000069E30 /* xcschememanagement.plist */,
-			);
-			path = xcschemes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +314,7 @@
 				DEVELOPMENT_TEAM = VRN4DR64TJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QGridTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,6 +335,7 @@
 				DEVELOPMENT_TEAM = VRN4DR64TJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QGridTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

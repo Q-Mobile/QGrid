@@ -105,6 +105,14 @@ struct PeopleView: View {
 </table>
 </center>
 
+## 🔷 QGrid Designer
+
+📱`QGridTestApp` contains also the QGrid Designer area view, with sliders for dynamic run-time configuration of the QGrid view (with config option to hide it). Please refer to the following demo executed on the device:
+
+<center>
+<img src="QGridDesignerDemo.gif"/>
+</center>
+
 ## 🔷 Roadmap / TODOs
 
 Version `0.1.0` of `QGrid ` contains a very limited set of features. It could be extended by implementing the following tasks:
