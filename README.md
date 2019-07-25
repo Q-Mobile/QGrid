@@ -1,7 +1,7 @@
 ![QGrid: The missing SwiftUI collection view.](QGridLogo.png)
 
 <p align="center">
-    <a href="https://travis-ci.org/Q-Mobile/QGrid"><img src="https://img.shields.io/travis/Q-Mobile/QGrid.svg?style=flat" alt="CI Status"/></a>
+    <a href="https://travis-ci.org/Q-Mobile/QGrid"><img src="https://travis-ci.org/Q-Mobile/QGrid.svg?branch=master" alt="CI Status"/></a>
     <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
     <img src="https://img.shields.io/badge/Swift-5-orange.svg" />
     <a href="https://swift.org/package-manager"><img src="https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" /></a>
@@ -110,7 +110,13 @@ struct PeopleView: View {
 📱`QGridTestApp` contains also the QGrid Designer area view, with sliders for dynamic run-time configuration of the QGrid view (with config option to hide it). Please refer to the following demo executed on the device:
 
 <center>
-<img src="QGridDesignerDemo.gif"/>
+<table bordercolor=white>
+  <tr>
+	 <th>
+	 	<img src="QGridDesignerDemo.gif"/>
+    </th>
+  </tr>
+</table>
 </center>
 
 ## 🔷 Roadmap / TODOs
@@ -119,6 +125,7 @@ Version `0.1.0` of `QGrid ` contains a very limited set of features. It could be
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Parameterize spacing&padding configuration depending on the device orientation  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add the option to specify scroll direction  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add content-only initializer to QGrid struct, without a collection of identified data as argument (As in SwiftUI’s `List`)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add support for other platforms (macOS, tvOS, watchOS)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add `Stack` layout option (as in `UICollectionView`)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add unit/UI tests  
