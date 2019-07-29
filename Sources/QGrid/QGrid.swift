@@ -28,7 +28,7 @@ import SwiftUI
 
 
 /// A container that presents rows of data arranged in multiple columns.
-@available(iOS 13.0, *)
+@available(iOS 13.0, OSX 10.15, *)
 public struct QGrid<Data, Content>: View
   where Data : RandomAccessCollection, Content : View, Data.Element : Identifiable {
   

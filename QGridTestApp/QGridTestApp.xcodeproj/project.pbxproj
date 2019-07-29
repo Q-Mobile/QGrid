@@ -26,6 +26,7 @@
 		922BA2D222DA717A00691539 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		922BA2D522DA717A00691539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922BA2D722DA717A00691539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9294B5F022EF6D4B0029E781 /* QGridTestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QGridTestApp.entitlements; sourceTree = "<group>"; };
 		9296085022DE13BB0039ABA3 /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		9296085222DE17E30039ABA3 /* PeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		9296085422DE193E0039ABA3 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 				9296085222DE17E30039ABA3 /* PeopleView.swift */,
 				9296085422DE193E0039ABA3 /* Storage.swift */,
 				922BA2CF22DA717A00691539 /* Assets.xcassets */,
+				9294B5F022EF6D4B0029E781 /* QGridTestApp.entitlements */,
 				922BA2D422DA717A00691539 /* LaunchScreen.storyboard */,
 				922BA2D722DA717A00691539 /* Info.plist */,
 				922BA2D122DA717A00691539 /* Preview Content */,
@@ -309,7 +311,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QGridTestApp/QGridTestApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "QGridTestApp/Preview\\ Content";
 				DEVELOPMENT_TEAM = VRN4DR64TJ;
 				ENABLE_PREVIEWS = YES;
@@ -321,6 +325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "it.q-mobile.QGridTestApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -330,7 +335,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QGridTestApp/QGridTestApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "QGridTestApp/Preview\\ Content";
 				DEVELOPMENT_TEAM = VRN4DR64TJ;
 				ENABLE_PREVIEWS = YES;
@@ -342,6 +349,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "it.q-mobile.QGridTestApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
