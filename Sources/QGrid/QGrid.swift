@@ -31,20 +31,19 @@ import SwiftUI
 @available(iOS 13.0, OSX 10.15, *)
 public struct QGrid<Data, Content>: View
   where Data : RandomAccessCollection, Content : View, Data.Element : Identifiable {
-  
-  public typealias DataItem = Data.Element.IdentifiedValue
+  private struct QGridIndex : Identifiable { var id: Int }
   
   // MARK: - STORED PROPERTIES
   
   private let columns: Int
   private let columnsInLandscape: Int
-  private let vSpacing: Length
-  private let hSpacing: Length
-  private let vPadding: Length
-  private let hPadding: Length
+  private let vSpacing: CGFloat
+  private let hSpacing: CGFloat
+  private let vPadding: CGFloat
+  private let hPadding: CGFloat
   
-  private let data: [DataItem]
-  private let content: (DataItem) -> Content
+  private let data: [Data.Element]
+  private let content: (Data.Element) -> Content
   
   // MARK: - INITIALIZERS
   
@@ -63,12 +62,12 @@ public struct QGrid<Data, Content>: View
   public init(_ data: Data,
               columns: Int,
               columnsInLandscape: Int? = nil,
-              vSpacing: Length = 10,
-              hSpacing: Length = 10,
-              vPadding: Length = 10,
-              hPadding: Length = 10,
-              content: @escaping (DataItem) -> Content) {
-    self.data = data.map { $0.identifiedValue }
+              vSpacing: CGFloat = 10,
+              hSpacing: CGFloat = 10,
+              vPadding: CGFloat = 10,
+              hPadding: CGFloat = 10,
+              content: @escaping (Data.Element) -> Content) {
+    self.data = data.map { $0 }
     self.content = content
     self.columns = max(1, columns)
     self.columnsInLandscape = columnsInLandscape ?? max(1, columns)
@@ -93,8 +92,8 @@ public struct QGrid<Data, Content>: View
     GeometryReader { geometry in
       ScrollView(showsIndicators: false) {
         VStack(spacing: self.vSpacing) {
-          ForEach(0 ..< self.rows) { row in
-            self.rowAtIndex(row * self.cols,
+          ForEach((0..<self.rows).map { QGridIndex(id: $0) }) { row in
+            self.rowAtIndex(row.id * self.cols,
                             geometry: geometry)
           }
           // Handle last row
@@ -116,11 +115,11 @@ public struct QGrid<Data, Content>: View
                           geometry: GeometryProxy,
                           isLastRow: Bool = false) -> some View {
     HStack(spacing: self.hSpacing) {
-      ForEach(0 ..< self.cols) { column in
-        self.contentAtIndex(index + column)
+      ForEach((0..<cols).map { QGridIndex(id: $0) }) { column in
+        self.contentAtIndex(index + column.id)
           .frame(width: self.contentWidthForGeometry(geometry))
           // Dirty little hack to handle layouting of the last row gracefully :
-          .opacity(!isLastRow || column < self.data.count % self.cols ? 1.0 : 0.0)
+          .opacity(!isLastRow || column.id < self.data.count % self.cols ? 1.0 : 0.0)
       }
     }
   }
@@ -133,7 +132,7 @@ public struct QGrid<Data, Content>: View
   
   // MARK: - HELPER FUNCTIONS
   
-  private func contentWidthForGeometry(_ geometry: GeometryProxy) -> Length {
+  private func contentWidthForGeometry(_ geometry: GeometryProxy) -> CGFloat {
     let hSpacings = hSpacing * (CGFloat(self.cols) - 1)
     let width = geometry.size.width - hSpacings - hPadding * 2
     return width / CGFloat(self.cols)

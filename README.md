@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://travis-ci.org/Q-Mobile/QGrid"><img src="https://travis-ci.org/Q-Mobile/QGrid.svg?branch=master" alt="CI Status"/></a>
-    <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
+    <img src="https://img.shields.io/badge/platform-iOS | macOS-blue.svg?style=flat" alt="Platforms" />
     <img src="https://img.shields.io/badge/Swift-5-orange.svg" />
     <a href="https://swift.org/package-manager"><img src="https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" /></a>
     <a href="https://raw.githubusercontent.com/q-mobile/QGrid/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
@@ -10,6 +10,8 @@
 </p>
 
 `QGrid` is the missing SwiftUI collection view. It uses the same approach as SwiftUI's `List` view, by computing its cells on demand from an underlying collection of identified data.
+
+⚠️ ☢️ `WARNING`: As of writing this, `macOS Catalina 10.15 beta 5` is still not available (although `Xcode 11 beta 5` is out). Attempts to run the test macOS app on `macOS Catalina 10.15 beta 4` and earlier will fail.
 
 <center>
 <img src="QGridDemo.gif"/>
@@ -19,7 +21,7 @@
 ## 🔷 Requirements
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ macOS 10.15+  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Xcode 11+ (beta 4 11M374r, as of writing this)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Xcode 11.0 (beta 5 11M382q, as of writing this)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Swift 5+  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ iOS 13+
 
@@ -114,15 +116,9 @@ struct PeopleView: View {
 
 📱`QGridTestApp` contains also the QGrid Designer area view, with sliders for dynamic run-time configuration of the QGrid view (with config option to hide it). Please refer to the following demo executed on the device:
 
-<center>
-<table bordercolor=white>
-  <tr>
-	 <th>
-	 	<img src="QGridDesignerDemo.gif"/>
-    </th>
-  </tr>
-</table>
-</center>
+<p align="center">
+<img src="QGridDesignerDemo.gif"/>
+</p>
 
 ## 🔷 Roadmap / TODOs
 

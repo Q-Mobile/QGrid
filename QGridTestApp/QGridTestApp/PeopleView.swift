@@ -28,8 +28,7 @@ struct PeopleView: View {
   var body: some View {
     GeometryReader { geometry in
       ZStack {
-        Color.clear
-        .background(self.backgroundGradient, cornerRadius: 0)
+        self.backgroundGradient
         .edgesIgnoringSafeArea(.all)
         VStack {
           if (QConstants.showDesigner) { self.designerView(geometry) }
@@ -81,10 +80,7 @@ struct PeopleView: View {
     HStack {
       Text(name)
       Text("\(Int(min(layoutParam.value, maxValue)))")
-      Slider(value: layoutParam,
-             from: minValue,
-             through: maxValue,
-             by: 1.0)
+      Slider(value: layoutParam, in: minValue...maxValue, step: 1.0)
     }
     .font(.headline).foregroundColor(.white)
     .padding([.horizontal], 10)
@@ -129,8 +125,8 @@ struct GridCell: View {
         .clipShape(Circle())
         .shadow(color: .primary, radius: 5)
         .padding([.horizontal, .top], 7)
-      Text(person.firstName)
-      Text(person.lastName)
+      Text(person.firstName).lineLimit(1)
+      Text(person.lastName).lineLimit(1)
     }
     .font(.headline).foregroundColor(.white)
   }
