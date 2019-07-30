@@ -1,7 +1,6 @@
 ![QGrid: The missing SwiftUI collection view.](QGridLogo.png)
 
 <p align="center">
-    <a href="https://travis-ci.org/Q-Mobile/QGrid"><img src="https://travis-ci.org/Q-Mobile/QGrid.svg?branch=master" alt="CI Status"/></a>
     <img src="https://img.shields.io/badge/platform-iOS | macOS-blue.svg?style=flat" alt="Platforms" />
     <img src="https://img.shields.io/badge/Swift-5-orange.svg" />
     <a href="https://swift.org/package-manager"><img src="https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" /></a>
@@ -55,8 +54,8 @@ struct GridCell: View {
         .clipShape(Circle())
         .shadow(color: .primary, radius: 5)
         .padding([.horizontal, .top], 7)
-      Text(person.firstName).font(.headline).color(.white)
-      Text(person.lastName).font(.headline).color(.white)
+      Text(person.firstName).lineLimit(1)
+      Text(person.lastName).lineLimit(1)
     }
   }
 }
