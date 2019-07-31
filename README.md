@@ -1,6 +1,7 @@
 ![QGrid: The missing SwiftUI collection view.](QGridLogo.png)
 
 <p align="center">
+	<a href="https://app.bitrise.io/app/f0f6bc185b95894e"><img src="https://img.shields.io/bitrise/f0f6bc185b95894e?token=oz0lqEXxqGjU-kKRf983_w" alt=“Build Status"/></a>
     <img src="https://img.shields.io/badge/platform-iOS | macOS-blue.svg?style=flat" alt="Platforms" />
     <img src="https://img.shields.io/badge/Swift-5-orange.svg" />
     <a href="https://swift.org/package-manager"><img src="https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" /></a>
@@ -121,7 +122,7 @@ struct PeopleView: View {
 
 ## 🔷 Roadmap / TODOs
 
-Version `0.1.0` of `QGrid ` contains a very limited set of features. It could be extended by implementing the following tasks:
+Version `0.1.1` of `QGrid ` contains a very limited set of features. It could be extended by implementing the following tasks:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Parameterize spacing&padding configuration depending on the device orientation  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add the option to specify scroll direction  
