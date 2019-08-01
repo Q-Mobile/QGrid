@@ -11,17 +11,14 @@
 
 `QGrid` is the missing SwiftUI collection view. It uses the same approach as SwiftUI's `List` view, by computing its cells on demand from an underlying collection of identified data.
 
-⚠️ ☢️ `WARNING`: As of writing this, `macOS Catalina 10.15 beta 5` is still not available (although `Xcode 11 beta 5` is out). Attempts to run the test macOS app on `macOS Catalina 10.15 beta 4` and earlier will fail.
-
 <center>
 <img src="QGridDemo.gif"/>
 </center>
 
-
 ## 🔷 Requirements
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ macOS 10.15+  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Xcode 11.0 (beta 5 11M382q, as of writing this)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Xcode 11.0 (beta 5 19A526h, as of writing this)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Swift 5+  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ iOS 13+
 
