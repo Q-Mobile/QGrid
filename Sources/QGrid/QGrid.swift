@@ -96,11 +96,12 @@ public struct QGrid<Data, Content>: View
             self.rowAtIndex(row.id * self.cols,
                             geometry: geometry)
           }
+            
           // Handle last row
           if (self.data.count % self.cols > 0) {
-            self.rowAtIndex(self.rows * self.cols,
-                            geometry: geometry,
-                            isLastRow: true)
+            self.lastRowAtIndex(self.rows * self.cols,
+                                geometry: geometry,
+                                lastRowContentCount: self.data.count % self.cols)
           }
         }
       }
@@ -112,15 +113,24 @@ public struct QGrid<Data, Content>: View
   // MARK: - `BODY BUILDER` 💪 FUNCTIONS
   
   private func rowAtIndex(_ index: Int,
-                          geometry: GeometryProxy,
-                          isLastRow: Bool = false) -> some View {
+                          geometry: GeometryProxy) -> some View {
     HStack(spacing: self.hSpacing) {
       ForEach((0..<cols).map { QGridIndex(id: $0) }) { column in
         self.contentAtIndex(index + column.id)
           .frame(width: self.contentWidthForGeometry(geometry))
-          // Dirty little hack to handle layouting of the last row gracefully :
-          .opacity(!isLastRow || column.id < self.data.count % self.cols ? 1.0 : 0.0)
       }
+    }
+  }
+    
+  private func lastRowAtIndex(_ index: Int,
+                              geometry: GeometryProxy,
+                              lastRowContentCount: Int) -> some View {
+    HStack(spacing: self.hSpacing) {
+      ForEach((0..<lastRowContentCount).map { QGridIndex(id: $0) }) { column in
+        self.contentAtIndex(index + column.id)
+          .frame(width: self.contentWidthForGeometry(geometry))
+      }
+      Spacer()
     }
   }
   
