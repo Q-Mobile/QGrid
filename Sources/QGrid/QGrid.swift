@@ -94,12 +94,15 @@ public struct QGrid<Data, Content>: View
         VStack(spacing: self.vSpacing) {
           ForEach((0..<self.rows).map { QGridIndex(id: $0) }) { row in
             self.rowAtIndex(row.id * self.cols,
-                            geometry: geometry)
+                            geometry: geometry,
+                            contentCount: self.cols)
           }
+            
           // Handle last row
           if (self.data.count % self.cols > 0) {
-            self.rowAtIndex(self.rows * self.cols,
+            self.rowAtIndex(self.cols * self.rows,
                             geometry: geometry,
+                            contentCount: self.data.count % self.cols,
                             isLastRow: true)
           }
         }
@@ -113,23 +116,19 @@ public struct QGrid<Data, Content>: View
   
   private func rowAtIndex(_ index: Int,
                           geometry: GeometryProxy,
+                          contentCount: Int,
                           isLastRow: Bool = false) -> some View {
     HStack(spacing: self.hSpacing) {
-      ForEach((0..<cols).map { QGridIndex(id: $0) }) { column in
-        self.contentAtIndex(index + column.id)
-          .frame(width: self.contentWidthForGeometry(geometry))
-          // Dirty little hack to handle layouting of the last row gracefully :
-          .opacity(!isLastRow || column.id < self.data.count % self.cols ? 1.0 : 0.0)
+      ForEach((0..<contentCount).map { QGridIndex(id: $0) }) { column in
+        if index < self.data.count {
+            self.content(self.data[index + column.id])
+                .frame(width: self.contentWidthForGeometry(geometry))
+        }
       }
+      if isLastRow { Spacer() }
     }
   }
-  
-  private func contentAtIndex(_ index: Int) -> Content {
-    // (Addressing the workaround with transparent content in the last row) :
-    let object = index < data.count ? data[index] : data[data.count - 1]
-    return content(object)
-  }
-  
+    
   // MARK: - HELPER FUNCTIONS
   
   private func contentWidthForGeometry(_ geometry: GeometryProxy) -> CGFloat {
