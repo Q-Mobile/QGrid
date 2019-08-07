@@ -80,11 +80,11 @@ public struct QGrid<Data, Content>: View
   // MARK: - COMPUTED PROPERTIES
   
   private var rows: Int {
-    return data.count / self.cols
+    data.count / self.cols
   }
   
   private var cols: Int {
-    return UIDevice.current.orientation.isLandscape ? columnsInLandscape : columns
+    UIDevice.current.orientation.isLandscape ? columnsInLandscape : columns
   }
   
   /// Declares the content and behavior of this view.
@@ -94,15 +94,12 @@ public struct QGrid<Data, Content>: View
         VStack(spacing: self.vSpacing) {
           ForEach((0..<self.rows).map { QGridIndex(id: $0) }) { row in
             self.rowAtIndex(row.id * self.cols,
-                            geometry: geometry,
-                            contentCount: self.cols)
+                            geometry: geometry)
           }
-            
           // Handle last row
           if (self.data.count % self.cols > 0) {
             self.rowAtIndex(self.cols * self.rows,
                             geometry: geometry,
-                            contentCount: self.data.count % self.cols,
                             isLastRow: true)
           }
         }
@@ -116,14 +113,12 @@ public struct QGrid<Data, Content>: View
   
   private func rowAtIndex(_ index: Int,
                           geometry: GeometryProxy,
-                          contentCount: Int,
                           isLastRow: Bool = false) -> some View {
     HStack(spacing: self.hSpacing) {
-      ForEach((0..<contentCount).map { QGridIndex(id: $0) }) { column in
-        if index < self.data.count {
-            self.content(self.data[index + column.id])
-                .frame(width: self.contentWidthForGeometry(geometry))
-        }
+      ForEach((0..<(isLastRow ? data.count % cols : cols))
+      .map { QGridIndex(id: $0) }) { column in
+        self.content(self.data[index + column.id])
+        .frame(width: self.contentWidthFor(geometry))
       }
       if isLastRow { Spacer() }
     }
@@ -131,7 +126,7 @@ public struct QGrid<Data, Content>: View
     
   // MARK: - HELPER FUNCTIONS
   
-  private func contentWidthForGeometry(_ geometry: GeometryProxy) -> CGFloat {
+  private func contentWidthFor(_ geometry: GeometryProxy) -> CGFloat {
     let hSpacings = hSpacing * (CGFloat(self.cols) - 1)
     let width = geometry.size.width - hSpacings - hPadding * 2
     return width / CGFloat(self.cols)
