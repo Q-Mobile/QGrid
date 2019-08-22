@@ -79,7 +79,7 @@ struct PeopleView: View {
                             maxValue: CGFloat) -> some View {
     HStack {
       Text(name)
-      Text("\(Int(min(layoutParam.value, maxValue)))")
+      Text("\(Int(min(layoutParam.wrappedValue, maxValue)))")
       Slider(value: layoutParam, in: minValue...maxValue, step: 1.0)
     }
     .font(.headline).foregroundColor(.white)
