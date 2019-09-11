@@ -18,7 +18,7 @@
 ## 🔷 Requirements
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ macOS 10.15+  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Xcode 11.0 (beta 5 19A526h, as of writing this)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Xcode 11.0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Swift 5+  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ iOS 13+
 
