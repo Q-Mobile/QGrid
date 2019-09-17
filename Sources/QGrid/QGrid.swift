@@ -84,7 +84,11 @@ public struct QGrid<Data, Content>: View
   }
   
   private var cols: Int {
-    UIDevice.current.orientation.isLandscape ? columnsInLandscape : columns
+    #if os(tvOS)
+    return columnsInLandscape
+    #else
+    return UIDevice.current.orientation.isLandscape ? columnsInLandscape : columns
+    #endif
   }
   
   /// Declares the content and behavior of this view.

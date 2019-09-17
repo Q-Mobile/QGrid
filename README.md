@@ -21,6 +21,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Xcode 11.0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Swift 5+  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ iOS 13+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ tvOS 13+
 
 ## 🔷 Installation
 
@@ -124,7 +125,7 @@ Version `0.1.1` of `QGrid ` contains a very limited set of features. It could be
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Parameterize spacing&padding configuration depending on the device orientation  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add the option to specify scroll direction  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add content-only initializer to QGrid struct, without a collection of identified data as argument (As in SwiftUI’s `List`)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add support for other platforms (tvOS, watchOS)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add support for other platforms (watchOS)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add `Stack` layout option (as in `UICollectionView`)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add unit/UI tests  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ ... many other improvements
