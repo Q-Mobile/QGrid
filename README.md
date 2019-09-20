@@ -1,3 +1,12 @@
+<center>
+**[NOTE]**  
+If you'd like to see `QGrid` in action, check out this demo of early alpha version of `QDesigner`:  
+If you want to influence the future of app design & development,  
+please [Retweet this](https://twitter.com/karolkulesza/status/1173670811598761985) and register for Beta at: [https://Q-Mobile.IT/Q-Designer](https://Q-Mobile.IT/Q-Designer)
+</center>
+
+[![QDesigner Preview](QDesignerPreview.png)](https://youtu.be/_nCM9O-v7mQ)
+
 ![QGrid: The missing SwiftUI collection view.](QGridLogo.png)
 
 <p align="center">
