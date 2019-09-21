@@ -28,7 +28,7 @@ import SwiftUI
 
 
 /// A container that presents rows of data arranged in multiple columns.
-@available(iOS 13.0, OSX 10.15, *)
+@available(iOS 13.0, OSX 10.15, watchOS 6.0, *)
 public struct QGrid<Data, Content>: View
   where Data : RandomAccessCollection, Content : View, Data.Element : Identifiable {
   private struct QGridIndex : Identifiable { var id: Int }
@@ -84,11 +84,16 @@ public struct QGrid<Data, Content>: View
   }
   
   private var cols: Int {
+
     #if os(tvOS)
-    return columnsInLandscape
-    #else
-    return UIDevice.current.orientation.isLandscape ? columnsInLandscape : columns
+        return columnsInLandscape
+    #elseif os(iOS)
+        return UIDevice.current.orientation.isLandscape ? columnsInLandscape : columns
+    #elseif os(watchOS)
+        return columns
     #endif
+      }
+    
   }
   
   /// Declares the content and behavior of this view.

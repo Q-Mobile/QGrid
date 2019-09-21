@@ -29,6 +29,8 @@ If you want to influence the future of app design & development, please [Retweet
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Swift 5+  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ iOS 13+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ tvOS 13+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ watchOS 6+
+
 
 ## 🔷 Installation
 
