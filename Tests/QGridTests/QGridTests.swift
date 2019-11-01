@@ -4,7 +4,7 @@ import XCTest
 
 class QGridTests: XCTestCase {
     static var allTests = [
-        ("QGrid", testQGrid),
+        ("QGrid", testQGridInitialization),
     ]
 
     // MARK: - Identifiable data
@@ -16,7 +16,7 @@ class QGridTests: XCTestCase {
 
     // MARK: - Tests
 
-    func testQGrid() {
+    func testQGridInitialization() {
         let array = [
             TestData(text: "Person"),
             TestData(text: "Place"),
