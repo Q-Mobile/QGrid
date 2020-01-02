@@ -42,6 +42,8 @@ public struct QGrid<Data, Content>: View
   private let vPadding: CGFloat
   private let hPadding: CGFloat
   
+  private let scrollIndicators: Bool
+  
   private let data: [Data.Element]
   private let content: (Data.Element) -> Content
   
@@ -66,6 +68,7 @@ public struct QGrid<Data, Content>: View
               hSpacing: CGFloat = 10,
               vPadding: CGFloat = 10,
               hPadding: CGFloat = 10,
+              scrollIndicators: Bool = false,
               content: @escaping (Data.Element) -> Content) {
     self.data = data.map { $0 }
     self.content = content
@@ -75,6 +78,7 @@ public struct QGrid<Data, Content>: View
     self.hSpacing = hSpacing
     self.vPadding = vPadding
     self.hPadding = hPadding
+    self.scrollIndicators = scrollIndicators
   }
   
   // MARK: - COMPUTED PROPERTIES
@@ -96,7 +100,7 @@ public struct QGrid<Data, Content>: View
   /// Declares the content and behavior of this view.
   public var body : some View {
     GeometryReader { geometry in
-      ScrollView(showsIndicators: false) {
+      ScrollView(showsIndicators: self.scrollIndicators) {
         VStack(spacing: self.vSpacing) {
           ForEach((0..<self.rows).map { QGridIndex(id: $0) }) { row in
             self.rowAtIndex(row.id * self.cols,
