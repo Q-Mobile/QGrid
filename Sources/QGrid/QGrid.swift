@@ -153,8 +153,6 @@ public struct QGrid<Data, Content>: View
         return [.vertical, .horizontal]
     case .none:
         return []
-    default:
-        return [.vertical]
     }
   }
 }
