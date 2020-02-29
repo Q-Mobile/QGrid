@@ -63,10 +63,10 @@ public struct QGrid<Data, Content>: View
   public init(_ data: Data,
               columns: Int,
               columnsInLandscape: Int? = nil,
-              vSpacing: CGFloat = 10,
-              hSpacing: CGFloat = 10,
-              vPadding: CGFloat = 10,
-              hPadding: CGFloat = 10,
+              vSpacing: CGFloat = 8,
+              hSpacing: CGFloat = 8,
+              vPadding: CGFloat = 0,
+              hPadding: CGFloat = 0,
               isScrollable: Bool = true,
               content: @escaping (Data.Element) -> Content) {
     self.data = data.map { $0 }
