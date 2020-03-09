@@ -32,6 +32,7 @@ import SwiftUI
 public struct QGrid<Data, Content>: View
   where Data : RandomAccessCollection, Content : View, Data.Element : Identifiable {
   private struct QGridIndex : Identifiable { var id: Int }
+  public enum ScrollDirection { case vertical, horizontal, both, none }
   
   // MARK: - STORED PROPERTIES
   
@@ -41,6 +42,7 @@ public struct QGrid<Data, Content>: View
   private let hSpacing: CGFloat
   private let vPadding: CGFloat
   private let hPadding: CGFloat
+  private let scrollDirection: ScrollDirection
   
   private let data: [Data.Element]
   private let content: (Data.Element) -> Content
@@ -58,6 +60,7 @@ public struct QGrid<Data, Content>: View
   ///     - hSpacing: Horizontal spacing: The distance between each cell in grid's row. If not provided, the default value will be used.
   ///     - vPadding: Vertical padding: The distance between top/bottom edge of the grid and the parent view. If not provided, the default value will be used.
   ///     - hPadding: Horizontal padding: The distance between leading/trailing edge of the grid and the parent view. If not provided, the default value will be used.
+  ///         - scrollDirection: Scrolling direction: The direction of scrolling behaviour. If not provided, the default `.vertical` value will be used.
   ///     - content: A closure returning the content of the individual cell
   public init(_ data: Data,
               columns: Int,
@@ -66,6 +69,7 @@ public struct QGrid<Data, Content>: View
               hSpacing: CGFloat = 10,
               vPadding: CGFloat = 10,
               hPadding: CGFloat = 10,
+              scrollDirection: ScrollDirection = .vertical,
               content: @escaping (Data.Element) -> Content) {
     self.data = data.map { $0 }
     self.content = content
@@ -75,6 +79,7 @@ public struct QGrid<Data, Content>: View
     self.hSpacing = hSpacing
     self.vPadding = vPadding
     self.hPadding = hPadding
+    self.scrollDirection = scrollDirection
   }
   
   // MARK: - COMPUTED PROPERTIES
@@ -96,7 +101,7 @@ public struct QGrid<Data, Content>: View
   /// Declares the content and behavior of this view.
   public var body : some View {
     GeometryReader { geometry in
-      ScrollView(showsIndicators: false) {
+      ScrollView(self.scrollAxes, showsIndicators: false) {
         VStack(spacing: self.vSpacing) {
           ForEach((0..<self.rows).map { QGridIndex(id: $0) }) { row in
             self.rowAtIndex(row.id * self.cols,
@@ -136,6 +141,19 @@ public struct QGrid<Data, Content>: View
     let hSpacings = hSpacing * (CGFloat(self.cols) - 1)
     let width = geometry.size.width - hSpacings - hPadding * 2
     return width / CGFloat(self.cols)
+  }
+    
+  private var scrollAxes: Axis.Set {
+    switch scrollDirection {
+    case .vertical:
+        return [.vertical]
+    case .horizontal:
+        return [.horizontal]
+    case .both:
+        return [.vertical, .horizontal]
+    case .none:
+        return []
+    }
   }
 }
 

@@ -84,7 +84,8 @@ struct PeopleView: View {
           vSpacing: 50,
           hSpacing: 20,
           vPadding: 100,
-          hPadding: 20) { person in
+          hPadding: 20,
+          scrollDirection: .horizontal) { person in
             GridCell(person: person)
     }
   }
@@ -134,7 +135,6 @@ struct PeopleView: View {
 Version `0.1.1` of `QGrid ` contains a very limited set of features. It could be extended by implementing the following tasks:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Parameterize spacing&padding configuration depending on the device orientation  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add the option to specify scroll direction  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add content-only initializer to QGrid struct, without a collection of identified data as argument (As in SwiftUI’s `List`)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add support for other platforms (watchOS)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☘️ Add `Stack` layout option (as in `UICollectionView`)  
