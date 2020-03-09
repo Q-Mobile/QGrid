@@ -1,7 +1,11 @@
 
 **[NOTE]**  
-If you'd like to see `QGrid` in action, check out this demo of early alpha version of `QDesigner`:  
-If you want to influence the future of app design & development, please [Retweet this](https://twitter.com/karolkulesza/status/1173670811598761985) and register for Beta at: [https://Q-Mobile.IT/Q-Designer](https://Q-Mobile.IT/Q-Designer)
+If you'd like to see `QGrid` in action, check out this demo of early alpha version of `QDesigner` (see video below).  
+Install Beta of `QDesigner`: [https://testflight.apple.com/join/aSXW5tVp](https://testflight.apple.com/join/aSXW5tVp)  
+Install a companion `QDesigner Client` on iPhone, to see your UI design on a target device, updated in real-time:
+[https://testflight.apple.com/join/DQv0DBJU](https://testflight.apple.com/join/DQv0DBJU)  
+
+Learn more at: [https://Q-Mobile.IT/Q-Designer](https://Q-Mobile.IT/Q-Designer)
 
 [![QDesigner Preview](QDesignerPreview.png)](https://youtu.be/_nCM9O-v7mQ)
 
