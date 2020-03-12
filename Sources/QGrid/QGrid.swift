@@ -35,12 +35,12 @@ public struct QGrid<Data, Content>: View
   
   // MARK: - STORED PROPERTIES
   
-  private let columns: Int
-  private let columnsInLandscape: Int
-  private let vSpacing: CGFloat
-  private let hSpacing: CGFloat
-  private let vPadding: CGFloat
-  private let hPadding: CGFloat
+  let columns: Int
+  let columnsInLandscape: Int
+  let vSpacing: CGFloat
+  let hSpacing: CGFloat
+  let vPadding: CGFloat
+  let hPadding: CGFloat
   
   private let data: [Data.Element]
   private let content: (Data.Element) -> Content

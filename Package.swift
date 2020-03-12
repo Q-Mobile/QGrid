@@ -19,5 +19,8 @@ let package = Package(
         .target(
             name: "QGrid",
             dependencies: []),
+        .testTarget(
+            name: "QGridTests",
+            dependencies: ["QGrid"]),
     ]
 )
