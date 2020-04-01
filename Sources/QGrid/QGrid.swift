@@ -42,6 +42,7 @@ public struct QGrid<Data, Content>: View
   private let vPadding: CGFloat
   private let hPadding: CGFloat
   private let isScrollable: Bool
+  private let showScrollIndicators: Bool
   
   private let data: [Data.Element]
   private let content: (Data.Element) -> Content
@@ -69,6 +70,7 @@ public struct QGrid<Data, Content>: View
               vPadding: CGFloat = 10,
               hPadding: CGFloat = 10,
               isScrollable: Bool = true,
+              showScrollIndicators: Bool = false,
               content: @escaping (Data.Element) -> Content) {
     self.data = data.map { $0 }
     self.content = content
@@ -79,6 +81,7 @@ public struct QGrid<Data, Content>: View
     self.vPadding = vPadding
     self.hPadding = hPadding
     self.isScrollable = isScrollable
+    self.showScrollIndicators = showScrollIndicators
   }
   
   // MARK: - COMPUTED PROPERTIES
@@ -102,7 +105,7 @@ public struct QGrid<Data, Content>: View
     GeometryReader { geometry in
       Group {
         if self.isScrollable {
-          ScrollView(showsIndicators: false) {
+          ScrollView(showsIndicators: self.showScrollIndicators) {
             self.content(using: geometry)
           }
         } else {
