@@ -41,6 +41,8 @@ public struct QGrid<Data, Content>: View
   private let hSpacing: CGFloat
   private let vPadding: CGFloat
   private let hPadding: CGFloat
+  private let isScrollable: Bool
+  private let showScrollIndicators: Bool
   
   private let data: [Data.Element]
   private let content: (Data.Element) -> Content
@@ -58,6 +60,7 @@ public struct QGrid<Data, Content>: View
   ///     - hSpacing: Horizontal spacing: The distance between each cell in grid's row. If not provided, the default value will be used.
   ///     - vPadding: Vertical padding: The distance between top/bottom edge of the grid and the parent view. If not provided, the default value will be used.
   ///     - hPadding: Horizontal padding: The distance between leading/trailing edge of the grid and the parent view. If not provided, the default value will be used.
+  ///     - isScrollable: Boolean that determines whether or not the grid should scroll
   ///     - content: A closure returning the content of the individual cell
   public init(_ data: Data,
               columns: Int,
@@ -66,6 +69,8 @@ public struct QGrid<Data, Content>: View
               hSpacing: CGFloat = 10,
               vPadding: CGFloat = 10,
               hPadding: CGFloat = 10,
+              isScrollable: Bool = true,
+              showScrollIndicators: Bool = false,
               content: @escaping (Data.Element) -> Content) {
     self.data = data.map { $0 }
     self.content = content
@@ -75,6 +80,8 @@ public struct QGrid<Data, Content>: View
     self.hSpacing = hSpacing
     self.vPadding = vPadding
     self.hPadding = hPadding
+    self.isScrollable = isScrollable
+    self.showScrollIndicators = showScrollIndicators
   }
   
   // MARK: - COMPUTED PROPERTIES
@@ -96,18 +103,13 @@ public struct QGrid<Data, Content>: View
   /// Declares the content and behavior of this view.
   public var body : some View {
     GeometryReader { geometry in
-      ScrollView(showsIndicators: false) {
-        VStack(spacing: self.vSpacing) {
-          ForEach((0..<self.rows).map { QGridIndex(id: $0) }) { row in
-            self.rowAtIndex(row.id * self.cols,
-                            geometry: geometry)
+      Group {
+        if self.isScrollable {
+          ScrollView(showsIndicators: self.showScrollIndicators) {
+            self.content(using: geometry)
           }
-          // Handle last row
-          if (self.data.count % self.cols > 0) {
-            self.rowAtIndex(self.cols * self.rows,
-                            geometry: geometry,
-                            isLastRow: true)
-          }
+        } else {
+          self.content(using: geometry)
         }
       }
       .padding(.horizontal, self.hPadding)
@@ -129,6 +131,21 @@ public struct QGrid<Data, Content>: View
       if isLastRow { Spacer() }
     }
   }
+    
+  private func content(using geometry: GeometryProxy) -> some View {
+   VStack(spacing: self.vSpacing) {
+     ForEach((0..<self.rows).map { QGridIndex(id: $0) }) { row in
+       self.rowAtIndex(row.id * self.cols,
+                       geometry: geometry)
+     }
+     // Handle last row
+     if (self.data.count % self.cols > 0) {
+       self.rowAtIndex(self.cols * self.rows,
+                       geometry: geometry,
+                       isLastRow: true)
+     }
+   }
+ }
     
   // MARK: - HELPER FUNCTIONS
   
