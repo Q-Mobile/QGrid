@@ -49,8 +49,7 @@ public struct QGrid<Data, Content>: View
   
   // MARK: - INITIALIZERS
   
-  /// Creates a QGrid that computes its cells on demand from an underlying
-  /// collection of identified data.
+  /// Creates a QGrid that computes its cells from an underlying collection of identified data.
   ///
   /// - Parameters:
   ///     - data: A collection of identified data.

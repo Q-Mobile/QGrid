@@ -20,7 +20,7 @@ Learn more at: [https://Q-Mobile.IT/Q-Designer](https://Q-Mobile.IT/Q-Designer)
     <a href="https://twitter.com/karolkulesza"><img src="https://img.shields.io/badge/contact-@karolkulesza-blue.svg?style=flat" alt="Twitter: @karolkulesza" /></a>
 </p>
 
-`QGrid` is the missing SwiftUI collection view. It uses the same approach as SwiftUI's `List` view, by computing its cells on demand from an underlying collection of identified data.
+`QGrid` is the missing SwiftUI collection view. It uses the same approach as SwiftUI's `List` view, by computing its cells from an underlying collection of identified data.
 
 <center>
 <img src="QGridDemo.gif"/>
