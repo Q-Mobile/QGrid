@@ -103,13 +103,15 @@ public struct QGrid<Data, Content>: View
   public var body : some View {
     GeometryReader { geometry in
       Group {
-        if self.isScrollable {
-          ScrollView(showsIndicators: self.showScrollIndicators) {
-            self.content(using: geometry)
+        if !self.data.isEmpty {
+            if self.isScrollable {
+              ScrollView(showsIndicators: self.showScrollIndicators) {
+                self.content(using: geometry)
+              }
+            } else {
+              self.content(using: geometry)
+            }
           }
-        } else {
-          self.content(using: geometry)
-        }
       }
       .padding(.horizontal, self.hPadding)
       .padding(.vertical, self.vPadding)
